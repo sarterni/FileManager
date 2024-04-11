@@ -47,9 +47,9 @@ div.userInteraction-btn button {
     color: #09529b;
 }
 
-@media screen and (max-width: 711px) {
+@media only screen and (max-width: 600px) {
     .grid-container {
         grid-template-columns: auto auto;
-        
-    }
 }
+}
+
