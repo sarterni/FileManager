@@ -1,4 +1,4 @@
-let buttonCount = 0;
+let buttonCount = 17
 
 const addButton = document.querySelector('#add');
 
@@ -12,17 +12,18 @@ addButton.addEventListener('click', function () {
     gridContainer.appendChild(newButton);
 
     newButton.classList.add('grid-item');
-    buttonCount += 1;
     newButton.id = 'btn-' + buttonCount;
+    buttonCount += 1;
 });
 
 
 const renameButton = document.querySelector('#rename');
 
 renameButton.addEventListener('click', function () {
-
     const buttonId = prompt('Enter the id of the button you want to rename: (btn-1, btn-2, etc.)');
+    alert('buttonId:', buttonId);
     const buttonToRename = document.getElementById(buttonId);
+    alert('buttonToRename:', buttonToRename);
     if (buttonToRename) {
         const newName = prompt('Enter the new name for the button:');
         buttonToRename.textContent = newName;
