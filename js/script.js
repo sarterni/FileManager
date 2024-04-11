@@ -36,9 +36,13 @@ renameButton.addEventListener('click', function () {
 const removeButton = document.querySelector('#remove');
 
 removeButton.addEventListener('click', function () {
-    const buttons = document.querySelectorAll('.grid-item');
-    if (buttons.length > 0) {
-        const lastButton = buttons[buttons.length - 1];
-        lastButton.remove();
+    const buttonId = prompt('Enter the id of the button you want to remove: (btn-1, btn-2, etc.)');
+    alert('buttonId:', buttonId);
+    const buttonToRemove = document.getElementById(buttonId);
+    alert('buttonTToREmove:', buttonToRemove)
+    if (buttonToRemove) {
+        buttonToRemove.remove();
+    } else {
+        alert('Button not found!');
     }
 });
