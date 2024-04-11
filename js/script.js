@@ -19,14 +19,14 @@ addButton.addEventListener('click', function () {
 const renameButton = document.querySelector('#rename');
 
 renameButton.addEventListener('click', function () {
-    const buttons = document.querySelectorAll('.grid-item');
+    // const buttons = document.querySelectorAll('.grid-item');
     const buttonId = prompt('Enter the id of the button you want to rename: (btn-1, btn-2, etc.)');
     const buttonToRename = document.getElementById(buttonId);
     if (buttonToRename) {
         const newName = prompt('Enter the new name for the button:');
         buttonToRename.textContent = newName;
     } else {
-        console.log('Button not found!');
+        alert('Button not found!');
     }
 });
 
