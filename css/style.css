@@ -50,5 +50,6 @@ div.userInteraction-btn button {
 @media screen and (max-width: 711px) {
     .grid-container {
         grid-template-columns: auto auto;
+        
     }
 }
