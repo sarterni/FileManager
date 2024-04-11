@@ -1,3 +1,4 @@
+let buttonCount = 0;
 
 const addButton = document.querySelector('#add');
 
@@ -10,16 +11,16 @@ addButton.addEventListener('click', function () {
     const gridContainer = document.querySelector('.grid-container');
     gridContainer.appendChild(newButton);
 
-
     newButton.classList.add('grid-item');
-    newButton.id = 'btn-' + (buttons.length + 1);
+    buttonCount += 1;
+    newButton.id = 'btn-' + buttonCount;
 });
 
 
 const renameButton = document.querySelector('#rename');
 
 renameButton.addEventListener('click', function () {
-    // const buttons = document.querySelectorAll('.grid-item');
+
     const buttonId = prompt('Enter the id of the button you want to rename: (btn-1, btn-2, etc.)');
     const buttonToRename = document.getElementById(buttonId);
     if (buttonToRename) {
@@ -31,12 +32,12 @@ renameButton.addEventListener('click', function () {
 });
 
 
-        const removeButton = document.querySelector('#remove');
-        
-        removeButton.addEventListener('click', function () {
-            const buttons = document.querySelectorAll('.grid-item');
-            if (buttons.length > 0) {
-                const lastButton = buttons[buttons.length - 1];
-                lastButton.remove();
-            }
-        });
+const removeButton = document.querySelector('#remove');
+
+removeButton.addEventListener('click', function () {
+    const buttons = document.querySelectorAll('.grid-item');
+    if (buttons.length > 0) {
+        const lastButton = buttons[buttons.length - 1];
+        lastButton.remove();
+    }
+});
