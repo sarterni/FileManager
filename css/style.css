@@ -20,10 +20,7 @@
     text-align: center;
 }
 
-#add {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
+div.userInteraction-btn button {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -31,5 +28,21 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
+#add {
+    background-color: #4CAF50;
+
+}
+
+#remove {
+    background-color: #e82121;
+    color: #fff;
+}
+
+#rename {
+    background-color: #fff;
+    color: #09529b;
+}
